@@ -10,12 +10,12 @@
 using namespace std;
 
 typedef struct {
-	int lower, upper; //level upper and lower bounds
+	int Lower, Upper; //level upper and lower bounds
 	int ID; //pokemon pokedex number
 
 	int Grass, Water; //what tiles do they show up on?
 
-	int chance; //chance of encounter
+	int Chance; //chance of encounter
 
 } Poke;
 
@@ -23,6 +23,7 @@ class Chances
 {
 	private:
 		vector<Poke> Pokemon;
+		int Breeds;
 
 	public:
 		Chances();
@@ -30,4 +31,7 @@ class Chances
 
 		bool FileSave(string filename);
 		bool FileLoad(string filename);
+
+		void Input(); //inputting information
+		void Output(); //writes informations to the screen
 };
