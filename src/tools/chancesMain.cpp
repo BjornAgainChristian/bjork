@@ -14,7 +14,8 @@ int main()
 	cout << "Choices:" << endl <<
 		"1) Input new data file" << endl <<
 		"2) Edit old data file" << endl <<
-		"3) Ouput old data file";
+		"3) Ouput old data file" << endl << endl <<
+		"Input choice: ";
 
 	cin >> choice;
 

@@ -13,7 +13,7 @@ typedef struct {
 	int Lower, Upper; //level upper and lower bounds
 	int ID; //pokemon pokedex number
 
-	int Grass, Water; //what tiles do they show up on?
+	int Grass, Water, Fishing; //what tiles do they show up on?
 
 	int Chance; //chance of encounter
 

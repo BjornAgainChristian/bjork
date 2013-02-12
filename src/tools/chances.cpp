@@ -30,6 +30,8 @@ void Chances::Input()
 
 	for (int i = 0; i < Breeds; i++)
 	{
+		cout << "Pokemon " << i + 1 << ":" << endl;
+		
 		cout << "Pokedex ID number: ";
 		cin >> Poketemp.ID;
 
@@ -45,8 +47,13 @@ void Chances::Input()
 		cout << "Found in water: ";
 		cin >> Poketemp.Water;
 
+		cout << "Found when fishing: ";
+		cin >> Poketemp.Fishing;
+
 		cout << "Chance of encounter: ";
 		cin >> Poketemp.Chance;
+
+		cout << endl; //formatting
 	}
 }
 
