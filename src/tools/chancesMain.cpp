@@ -8,7 +8,7 @@ using namespace std;
 int main()
 {	
 	Chances prog;
-
+	string file;
 	int choice = 0;
 
 	cout << "Choices:" << endl <<
@@ -23,10 +23,15 @@ int main()
 	{
 		case 1:
 			prog.Input();
+			break;
 		case 2:
 //TODO: add			prog.Edit();
 		case 3:
+			cout << "Enter file name: ";
+			cin >> file;
+			prog.FileLoad(file);
 			prog.Output();
+			break;
 	}
 
 	return 0;

@@ -10,8 +10,9 @@
 using namespace std;
 
 typedef struct {
-	int Lower, Upper; //level upper and lower bounds
 	int ID; //pokemon pokedex number
+
+	int Lower, Upper; //level upper and lower bounds
 
 	int Grass, Water, Fishing; //what tiles do they show up on?
 
