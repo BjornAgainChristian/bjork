@@ -1,5 +1,21 @@
-/* This writes the file that dictates the pokemon found in each area
+/*
+ * This writes the file that dictates the pokemon found in each area
  * and also dictates levels and other information for them
+ */
+
+/*
+ * Chances file struct:
+ * 
+ * Number of breeds
+ *
+ * Per pokemon:
+ * Pokedex ID Number
+ * Lower Level Bound
+ * Upper Level Bound
+ * Grass Flag
+ * Water Flag
+ * Fishing Flag
+ * Chance To Encounter
  */
 
 #include <iostream>
