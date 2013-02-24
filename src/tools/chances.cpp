@@ -125,3 +125,36 @@ bool Chances::FileLoad(string filename)
 
 	Input.close();
 }
+
+bool Chances::Edit(string filename)
+{
+	FileLoad(filename);
+
+	for (int i = 0; i < Breeds; i++)
+	{
+		cout << "Pokemon " << i + 1 << ":" << endl;
+
+		cout << "Old ID: " << Pokemon[i].ID << "  New: ";
+		cin >> Pokemon[i].ID;
+
+		cout << "Old Lower Bound: " << Pokemon[i].Lower << "  New: ";
+		cin >> Pokemon[i].Lower;
+
+		cout << "Old Upper Bound: " << Pokemon[i].Upper << "  New: ";
+		cin >> Pokemon[i].Upper;
+
+		cout << "Old Grass Flag: " << Pokemon[i].Grass << "  New: ";
+		cin >> Pokemon[i].Grass;
+
+		cout << "Old Water Flag: " << Pokemon[i].Water << "  New: ";
+		cin >> Pokemon[i].Water;
+
+		cout << "Old Fishing Flag: " << Pokemon[i].Fishing << "  New: ";
+		cin >> Pokemon[i].Fishing;
+
+		cout << "Old Chance %: " << Pokemon[i].Chance << "  New: ";
+		cin >> Pokemon[i].Chance;
+	}
+
+	FileSave(filename);
+}

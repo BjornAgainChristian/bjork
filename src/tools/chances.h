@@ -48,6 +48,7 @@ class Chances
 
 		bool FileSave(string filename);
 		bool FileLoad(string filename);
+		bool Edit(string filename);
 
 		void Input(); //inputting information
 		void Output(); //writes informations to the screen

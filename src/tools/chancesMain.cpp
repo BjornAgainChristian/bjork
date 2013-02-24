@@ -25,7 +25,10 @@ int main()
 			prog.Input();
 			break;
 		case 2:
-//TODO: add			prog.Edit();
+			cout << "Enter file name: ";
+			cin >> file;
+			prog.Edit(file);
+			break;
 		case 3:
 			cout << "Enter file name: ";
 			cin >> file;

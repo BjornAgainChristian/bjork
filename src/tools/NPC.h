@@ -36,11 +36,21 @@ typedef struct {
 } Story;
 
 typedef struct {
-
+	string SpriteFile;
+	string PreBattleText;
+	string PostBattleText;
+	int MoneyDropped;
+	string BattleThemeFile;
 } Battle;
 
 typedef struct {
-
+	string SpriteFile;
+	string PreBattleText;
+	string PostBattleText;
+	int MoneyDropped;
+	string BattleThemeFile;
+	int TMDropped;
+	int BadgeDropped;
 } Gym;
 
 
@@ -51,6 +61,10 @@ class NPC
 		Battle battle;
 		Gym gym;
 
+		int Story, Battle, Gym;
+
 	public:
+		NPC();
+		~NPC();
 
 };
