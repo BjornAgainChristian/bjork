@@ -32,5 +32,9 @@ class Sprite
 		int NPC; //NPC/Object
 
 	public:
+		NPC();
+		~NPC();
 
+		bool FileSave(string filename);
+		bool FileLoad(string filename);
 };

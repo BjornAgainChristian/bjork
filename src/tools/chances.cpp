@@ -101,6 +101,8 @@ bool Chances::FileSave(string filename)
 	}
 
 	Output.close();
+
+	return true;
 }
 
 bool Chances::FileLoad(string filename)
@@ -124,6 +126,8 @@ bool Chances::FileLoad(string filename)
 	}
 
 	Input.close();
+
+	return true;
 }
 
 bool Chances::Edit(string filename)
@@ -157,4 +161,6 @@ bool Chances::Edit(string filename)
 	}
 
 	FileSave(filename);
+
+	return true;
 }
