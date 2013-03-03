@@ -15,6 +15,7 @@
  * Battle flag
  * Gym flag
  * Path To SpriteFile
+ * Name
  * Pre battle string (used as only thing said by story npc)
  * Post battle string (used when player gets victory)
  * Money given
@@ -32,11 +33,13 @@ using namespace std;
 
 typedef struct {
 	string SpriteFile;
+	string Name;
 	string FlavorText;
 } Story;
 
 typedef struct {
 	string SpriteFile;
+	string Name;
 	string PreBattleText;
 	string PostBattleText;
 	int MoneyDropped;
@@ -45,6 +48,7 @@ typedef struct {
 
 typedef struct {
 	string SpriteFile;
+	string Name;
 	string PreBattleText;
 	string PostBattleText;
 	int MoneyDropped;
@@ -67,4 +71,10 @@ class NPC
 		NPC();
 		~NPC();
 
+
+		void AddStory();
+		void AddBattle();
+		void AddGym();
+
+		bool FileLoad(string filename);
 };
