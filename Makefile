@@ -9,15 +9,17 @@ CORE		=
 
 TOOLS_DIR	= src/tools
 TOOL_CHANCES	= ${TOOLS_DIR}/chances.o ${TOOLS_DIR}/chancesMain.o
+TOOL_NPC 	= ${TOOLS_DIR}/NPC.o ${TOOLS_DIR}/NPCMain.o
 
 
-all: buildcore buildtools buildata
+all: buildcore buildtools builddata
 
 buildcore: $(CORE)
-		${CXX} ${LDFLAGS} ${CFLAGS} ${CORE} -o core
+	${CXX} ${LDFLAGS} ${CFLAGS} ${CORE} -o core
 
-buildtools: $(TOOL_CHANCES)
-	${CXX} ${LDFLAGS} ${CFLAGS} ${TOOL_CHANCES} -o ${TOOLS_DIR}/mapChances/chances
+buildtools: $(TOOL_CHANCES) $(TOOL_NPC)
+	${CXX} ${CFLAGS} ${TOOL_CHANCES} -o ${TOOLS_DIR}/mapChances/chances
+	${CXX} ${CFLAGS} ${TOOL_NPC} -o ${TOOLS_DIR}/NPCs/NPC
 
 builddata:
 	test -d data/ || mkdir data/
@@ -34,3 +36,4 @@ clean:
 	find src|egrep "\.l?o"|xargs rm -f
 	find src/tools|egrep "\.l?o"|xargs rm -f
 	rm src/tools/mapChances/chances
+	rm src/tools/NPCs/NPC

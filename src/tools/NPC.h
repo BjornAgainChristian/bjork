@@ -65,7 +65,7 @@ class NPC
 		Battle battle;
 		Gym gym;
 
-		int Story, Battle, Gym;
+		int StoryNPC, BattleNPC, GymNPC;
 
 	public:
 		NPC();
